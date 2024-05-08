@@ -33,7 +33,7 @@ class _MyAppState extends State<MyApp> {
       title: 'FileSystem Picker Demo',
       theme: ThemeData(
         primarySwatch: Colors.teal,
-        accentColor: Colors.white,
+        canvasColor: Colors.white,
         buttonTheme: ButtonThemeData(
           buttonColor: Colors.teal,
           textTheme: ButtonTextTheme.accent,

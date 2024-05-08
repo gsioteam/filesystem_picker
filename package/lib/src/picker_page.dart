@@ -201,6 +201,7 @@ class _FilesystemPickerState extends State<FilesystemPicker> {
 
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title ?? directoryName!),
@@ -214,9 +215,7 @@ class _FilesystemPickerState extends State<FilesystemPicker> {
               textTheme: TextTheme(
                 button: TextStyle(
                     color: AppBarTheme.of(context)
-                            .textTheme
-                            ?.headline6
-                            ?.color ??
+                        .titleTextStyle?.color ??
                         Theme.of(context).primaryTextTheme.headline6?.color),
               ),
             ),
@@ -265,20 +264,10 @@ class _FilesystemPickerState extends State<FilesystemPicker> {
                 child: Center(
                   child: TextButton.icon(
                     style: TextButton.styleFrom(
-                      primary: AppBarTheme.of(context)
-                              .textTheme
-                              ?.headline6
+                      backgroundColor: AppBarTheme.of(context)
+                              .titleTextStyle
                               ?.color ??
-                          Theme.of(context).primaryTextTheme.headline6?.color,
-                      onSurface: (AppBarTheme.of(context)
-                                  .textTheme
-                                  ?.headline6
-                                  ?.color ??
-                              Theme.of(context)
-                                  .primaryTextTheme
-                                  .headline6
-                                  ?.color)!
-                          .withOpacity(0.5),
+                          Theme.of(context).primaryTextTheme.titleLarge?.color,
                     ),
                     icon: Icon(Icons.check_circle),
                     label: (widget.pickText != null)
